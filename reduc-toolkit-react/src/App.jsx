@@ -1,10 +1,9 @@
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, incrementByAmount } from "./redux/createSlice";
+import { increment, decrement } from "./redux/createSlice";
 
 function App() {
   const count = useSelector((state) => state.counter.value);
-  console.log("🚀 ~ file: App.js:7 ~ App ~ count:", count);
   const dispatch = useDispatch();
   return (
     <div className="App">
@@ -24,13 +23,6 @@ function App() {
             }}
           >
             Decrement
-          </button>
-          <button
-            onClick={() => {
-              incrementByAmount(10);
-            }}
-          >
-            Increment By Amount
           </button>
         </p>
         <p>{count}</p>
